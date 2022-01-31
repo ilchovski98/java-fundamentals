@@ -58,8 +58,16 @@ public class Main {
 //        System.out.println(Arrays.toString(numbers));
 
         // Multi-dimensional Arrays
-        int[][] numbers = new int[2][3];
-        numbers[0][0] = 1;
-        System.out.println(Arrays.deepToString(numbers));
+//        int[][] numbers = new int[2][3];
+//        int[][] numbers2 = {{ 1, 2, 3 }, { 4, 5, 6 }};
+//        numbers[0][0] = 1;
+//        System.out.println(Arrays.deepToString(numbers));
+//        System.out.println(Arrays.deepToString(numbers2));
+
+        // Constants - its like const in js
+        // Use capital letters to name constants
+//        final float PI = 3.14F;
+//        PI = 1;
+//        System.out.println(pi);
     }
 }
