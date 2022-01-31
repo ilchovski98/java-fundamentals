@@ -69,5 +69,18 @@ public class Main {
 //        final float PI = 3.14F;
 //        PI = 1;
 //        System.out.println(pi);
+
+        // Arithmetic Expressions
+//        int result = 1 + 5;
+//        double result = (double)5 / (double)2;
+        int x = 5;
+        int y = 2;
+        double result = (double)x / (double)y;
+        int b = y++;
+        int c = ++x;
+        System.out.println(y);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(result);
     }
 }
