@@ -1,46 +1,11 @@
 package com.company;
 
-import java.text.NumberFormat;
-import java.util.Scanner;
-
 public class Mortage {
     final byte MONTHS_IN_YEAR = 12;
     final byte PERCENT = 100;
-    int principal = (int) readNumber("Principal: ", 1000, 1_000_000);
-    float annualInterest = (float) readNumber("Annual Interest Rate: ", 1, 30);
-    byte years = (byte) readNumber("Period (Years): ", 1, 30);
-
-    public void printMortgage() {
-        double mortgage = calculateMortgage(this.principal, this.annualInterest, this.years);
-        String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
-        System.out.println();
-        System.out.println("MORTGAGE");
-        System.out.println("--------");
-        System.out.println("Monthly Payments: " + mortgageFormatted);
-    }
-
-    public void printPaymentSchedule() {
-        System.out.println();
-        System.out.println("PAYMENT SCHEDULE");
-        System.out.println("----------------");
-        for (short month = 1; month <= this.years * this.MONTHS_IN_YEAR; month++) {
-            double balance = calculateBalance(principal, annualInterest, years, month);
-            System.out.println(NumberFormat.getCurrencyInstance().format(balance));
-        }
-    }
-
-    public double readNumber(String prompt, double min, double max) {
-        Scanner scanner = new Scanner(System.in);
-        double value;
-        while (true) {
-            System.out.print(prompt);
-            value = scanner.nextFloat();
-            if (value >= min && value <= max)
-                break;
-            System.out.println("Enter a value between " + min + " and " + max);
-        }
-        return value;
-    }
+    int principal = (int) Console.readNumber("Principal: ", 1000, 1_000_000);
+    float annualInterest = (float) Console.readNumber("Annual Interest Rate: ", 1, 30);
+    byte years = (byte) Console.readNumber("Period (Years): ", 1, 30);
 
     public double calculateBalance(
             int principal,
