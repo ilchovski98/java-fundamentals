@@ -1,7 +1,11 @@
 package com.company;
 
 public class UIControl {
-    private boolean isEnabled = true;
+    boolean isEnabled = true;
+
+    public UIControl(boolean isEnabled) {
+        this.isEnabled = isEnabled;
+    }
 
     public void disable() {
         isEnabled = false;
