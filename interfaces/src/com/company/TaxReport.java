@@ -11,4 +11,8 @@ public class TaxReport {
         var calc = calculator.calculateTax();
         System.out.println(calc);
     }
+
+    public void setCalculator(TaxCalculator calculator) {
+        this.calculator = calculator;
+    }
 }
