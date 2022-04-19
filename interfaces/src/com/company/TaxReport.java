@@ -1,10 +1,10 @@
 package com.company;
 
 public class TaxReport {
-    private TaxCalculator calculator;
+    private TaxCalculator2018 calculator;
 
     public TaxReport() {
-        this.calculator = new TaxCalculator(100_000);
+        this.calculator = new TaxCalculator2018(100_000);
     }
 
     public void show() {
