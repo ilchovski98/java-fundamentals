@@ -2,7 +2,8 @@ package com.company;
 
 public class Main {
     public static void main(String[] args) {
-        var newReport = new TaxReport();
-        newReport.show();
+        var calculator = new TaxCalculator2018(100_000);
+        var taxReport = new TaxReport(calculator);
+        taxReport.show();
     }
 }
