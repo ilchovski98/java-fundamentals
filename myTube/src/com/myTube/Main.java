@@ -12,7 +12,7 @@ public class Main {
         VideoDatabasable videoDatabase = new VideoDatabase();
         EmailServicable emailService = new EmailService();
 
-        var processor = new VideoProcessor(video, videoEncoder, videoDatabase, emailService);
-        processor.process();
+        var processor = new VideoProcessor(videoEncoder, videoDatabase, emailService);
+        processor.process(video);
     }
 }
