@@ -1,0 +1,9 @@
+package com.myTube;
+
+public class VideoEncoder implements VideoEncoderable {
+    @Override
+    public void encode(Video video) {
+        System.out.println("Encoding video...");
+        System.out.println("Done!\n");
+    }
+}
